@@ -1,5 +1,5 @@
 import { Outlet, useLocation } from "react-router-dom";
-import { useEffect } from "react";
+import { Suspense, lazy, useEffect } from "react";
 import {
   FloatingHearts,
   RosePetals,
@@ -7,6 +7,8 @@ import {
 } from "./Atmosphere";
 import SparkleCanvas from "./SparkleCanvas";
 import YouTubeMusic from "./YouTubeMusic";
+
+const Background3D = lazy(() => import("./Background3D"));
 
 /**
  * Shared chrome across all pages: atmosphere, music, footer.
@@ -25,6 +27,12 @@ export default function Layout() {
     <div className={celebrating ? "celebrating" : undefined}>
       <div className="bg-gradient" aria-hidden="true" />
       <div className="bg-glow" aria-hidden="true" />
+
+      {celebrating && (
+        <Suspense fallback={null}>
+          <Background3D />
+        </Suspense>
+      )}
 
       <FloatingHearts />
       <RosePetals />

@@ -101,6 +101,36 @@ body.celebrating .bg-gradient {
   50% { opacity: 1; transform: scale(1.05); }
 }
 
+/* ---------- 3D ACE background ---------- */
+.background-3d {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.background-3d canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.celebrating .background-3d {
+  opacity: 0.6;
+}
+
+@media (max-width: 640px) {
+  .background-3d {
+    opacity: 0.6;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .background-3d {
+    display: none;
+  }
+}
+
 /* ---------- Layers ---------- */
 .hearts-layer,
 .petals-layer,
@@ -477,7 +507,7 @@ body.celebrating .bg-gradient {
 
 .proposal-card {
   position: relative;
-  width: min(560px, 100%);
+  width: min(620px, 100%);
   padding: 2.5rem 2rem 2.75rem;
   text-align: center;
   overflow: hidden; /* keeps runaway NO + petals of motion inside the glass */
@@ -504,7 +534,7 @@ body.celebrating .bg-gradient {
   font-size: clamp(1.05rem, 2.4vw, 1.25rem);
   color: var(--text);
   line-height: 1.75;
-  min-height: 8em;
+  min-height: 4em;
   text-align: left;
   margin-bottom: 1.75rem;
   white-space: pre-wrap;

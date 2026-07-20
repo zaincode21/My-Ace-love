@@ -9,14 +9,16 @@ export default function CelebrationPage() {
           💕
         </div>
         <h1 className="popup-title heartbeat">
-          You just made me the happiest person alive{" "}
+          ACE, you just made me the happiest person alive{" "}
           <span aria-hidden="true">❤️</span>
         </h1>
         <p className="popup-message">
-          I promise to cherish, respect, and love you every day.
+          I promise to listen more, understand your feelings, and do my best to
+          make you feel loved, valued, and respected every day.
         </p>
         <p className="popup-forever heartbeat">
-          I love you forever <span aria-hidden="true">❤️</span>
+          Let's begin a new chapter together{" "}
+          <span aria-hidden="true">❤️</span>
         </p>
         <div className="celebration-actions">
           <Link to="/" className="btn btn-glow btn-primary">

@@ -2,16 +2,16 @@ export default function Hero({ loveSeconds, onOpenHeart }) {
   return (
     <section id="hero" className="hero section">
       <div className="hero-content fade-in">
-        <p className="eyebrow">A little something from the heart</p>
+        <p className="eyebrow">A letter from the heart</p>
         <h1 className="hero-title heartbeat">
-          To the Most Beautiful Girl{" "}
+          To My Dearest ACE{" "}
           <span className="heart-emoji" aria-hidden="true">
             ❤️
           </span>
         </h1>
         <p className="hero-subtitle">
-          Every moment with you makes my life brighter. You are the reason
-          behind my smile.
+          I miss what we had. I still love you, and I hope we can find our way
+          back to each other.
         </p>
         <button
           type="button"

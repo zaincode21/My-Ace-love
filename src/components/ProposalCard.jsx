@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from "react";
-import { ESCAPE_TEXTS, LOVE_LETTER } from "../constants";
+import { ESCAPE_TEXTS, LOVE_LETTER, RECIPIENT_NAME } from "../constants";
 import { useTypewriter } from "../hooks/useTypewriter";
 
 function makeId() {
@@ -176,7 +176,7 @@ export default function ProposalCard({ celebrating, onYes }) {
         onTouchStart={onCardPointer}
       >
         <h2 className="card-title heartbeat">
-          My Love Letter <span aria-hidden="true">❤️</span>
+          My Dearest {RECIPIENT_NAME} <span aria-hidden="true">❤️</span>
         </h2>
 
         <p className="love-letter" aria-live="polite">
@@ -187,7 +187,8 @@ export default function ProposalCard({ celebrating, onYes }) {
         {showQuestion && (
           <>
             <p className={`question${questionVisible ? " show" : ""}`}>
-              Will you be my girlfriend? <span aria-hidden="true">❤️</span>
+              {RECIPIENT_NAME}, will you give our love another chance?{" "}
+              <span aria-hidden="true">❤️</span>
             </p>
 
             <div className={`btn-row${questionVisible ? " show" : ""}`}>
@@ -197,7 +198,7 @@ export default function ProposalCard({ celebrating, onYes }) {
                 onClick={onYes}
                 disabled={celebrating}
               >
-                ❤️ Yes, I Love You Too
+                ❤️ Yes, Let's Try Again
               </button>
             </div>
           </>
