@@ -28,7 +28,7 @@ export default function Layout() {
       <div className="bg-gradient" aria-hidden="true" />
       <div className="bg-glow" aria-hidden="true" />
 
-      {celebrating && (
+      {!celebrating && (
         <Suspense fallback={null}>
           <Background3D />
         </Suspense>
